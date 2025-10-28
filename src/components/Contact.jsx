@@ -178,7 +178,7 @@ const Contact = () => {
               </div>
 
               <motion.a
-                href="/Portfolio/Resume_Yashpal_IIITHyderabad.pdf"
+                href="/Resume_Yashpal_IIITHyderabad.pdf"
                 download
                 className="download-resume"
                 whileHover={{ scale: 1.05 }}
