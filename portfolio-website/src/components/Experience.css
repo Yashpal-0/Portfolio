@@ -1,0 +1,293 @@
+/* Experience Section Styles */
+.experience {
+  position: relative;
+}
+
+.experience::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 10%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 90%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.experience-content {
+  position: relative;
+  z-index: 1;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  position: relative;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.experience-card:hover::before {
+  opacity: 1;
+}
+
+.experience-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(102, 126, 234, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.experience-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.experience-title h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.experience-title h4 {
+  font-size: 1.1rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+
+.experience-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #667eea;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.experience-link:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.experience-description {
+  color: #c0c0c0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.experience-achievements {
+  margin-bottom: 1.5rem;
+}
+
+.experience-achievements h5 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.experience-achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-achievements li {
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.experience-achievements li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-size: 0.8rem;
+}
+
+.experience-technologies {
+  margin-top: 1.5rem;
+}
+
+.experience-technologies h5 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-tag {
+  background: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+/* Timeline Connector */
+.experience-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 2rem;
+  top: 100%;
+  width: 2px;
+  height: 2rem;
+  background: linear-gradient(to bottom, #667eea, rgba(102, 126, 234, 0.3));
+  border-radius: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-card {
+    padding: 1.5rem;
+  }
+  
+  .experience-header-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .experience-meta {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .experience-title h3 {
+    font-size: 1.2rem;
+  }
+  
+  .experience-title h4 {
+    font-size: 1rem;
+  }
+  
+  .experience-description {
+    font-size: 1rem;
+  }
+  
+  .experience-achievements h5,
+  .experience-technologies h5 {
+    font-size: 1rem;
+  }
+  
+  .tech-tags {
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .experience-item:not(:last-child)::after {
+    left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-card {
+    padding: 1rem;
+  }
+  
+  .experience-title h3 {
+    font-size: 1.1rem;
+  }
+  
+  .experience-title h4 {
+    font-size: 0.9rem;
+  }
+  
+  .experience-description {
+    font-size: 0.9rem;
+  }
+  
+  .meta-item {
+    font-size: 0.8rem;
+  }
+  
+  .experience-link {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .experience-achievements li {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+  }
+}

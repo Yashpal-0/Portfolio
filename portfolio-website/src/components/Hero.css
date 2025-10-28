@@ -1,0 +1,331 @@
+/* Hero Section Styles */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  isolation: isolate; /* create new stacking context */
+}
+
+.hero-container {
+  max-width: none;
+  margin: 0;
+  padding: 0 2rem;
+  width: 100vw;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 80vh;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.hero-text {
+  color: white;
+}
+
+/* Ensure headline is always above decorative layers */
+.hero-text {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 1;
+  pointer-events: none; /* avoid capturing hover/focus over text area */
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 4;
+  overflow: visible;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+  color: #667eea; /* Fallback color for browsers that don't support background-clip */
+}
+
+/* Ensure the animated name is visible */
+.hero-name {
+  position: relative;
+  z-index: 5;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #667eea; /* Fallback color */
+  display: inline-block;
+  font-weight: 700;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-size: 1em; /* Slightly smaller to match code aesthetic */
+  letter-spacing: 0.05em;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #c0c0c0;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover {
+  background: rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Hero Visual */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.code-block {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 0;
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.code-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f56;
+}
+
+.code-dots span:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.code-dots span:nth-child(3) {
+  background: #27ca3f;
+}
+
+.code-title {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.code-content {
+  padding: 1.5rem;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.code-line {
+  margin-bottom: 0.5rem;
+  color: #e6e6e6;
+}
+
+.code-line.indent {
+  padding-left: 2rem;
+}
+
+.keyword {
+  color: #c678dd;
+  font-weight: 600;
+}
+
+.property {
+  color: #61dafb;
+}
+
+.string {
+  color: #98c379;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #a0a0a0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scroll-arrow {
+  width: 2px;
+  height: 30px;
+  background: linear-gradient(to bottom, #667eea, transparent);
+  position: relative;
+}
+
+.scroll-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #667eea;
+  border-bottom: 2px solid #667eea;
+  transform: rotate(45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .hero-visual {
+    order: -1;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 70px;
+  }
+  
+  .hero-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .code-content {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .code-line.indent {
+    padding-left: 1.5rem;
+  }
+}

@@ -1,0 +1,272 @@
+/* About Section Styles */
+.about {
+  background: rgba(255, 255, 255, 0.02);
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.about-text {
+  color: white;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #c0c0c0;
+  margin-bottom: 1.5rem;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.highlight-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(102, 126, 234, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.highlight-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.highlight-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.highlight-card p {
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Education Section */
+.education-section {
+  color: white;
+}
+
+.education-section h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.education-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(102, 126, 234, 0.3);
+  transform: translateX(10px);
+}
+
+.education-content h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.institution {
+  font-size: 1.1rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.education-meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.period,
+.location {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.period::before {
+  content: '📅';
+  font-size: 1rem;
+}
+
+.location::before {
+  content: '📍';
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-highlights {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    gap: 2rem;
+  }
+  
+  .about-text h3 {
+    font-size: 1.8rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+  }
+  
+  .highlight-card {
+    padding: 1.5rem;
+  }
+  
+  .highlight-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .highlight-card h4 {
+    font-size: 1.2rem;
+  }
+  
+  .education-section h3 {
+    font-size: 1.8rem;
+  }
+  
+  .education-item {
+    padding: 1.5rem;
+  }
+  
+  .education-content h4 {
+    font-size: 1.2rem;
+  }
+  
+  .institution {
+    font-size: 1rem;
+  }
+  
+  .education-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h3 {
+    font-size: 1.6rem;
+  }
+  
+  .highlight-card {
+    padding: 1rem;
+  }
+  
+  .highlight-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .education-item {
+    padding: 1rem;
+  }
+  
+  .education-item:hover {
+    transform: translateX(5px);
+  }
+}
