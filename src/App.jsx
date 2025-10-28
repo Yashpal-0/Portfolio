@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { HelmetProvider } from 'react-helmet-async'
+import SEO from './components/SEO'
+import GoogleAnalytics from './components/GoogleAnalytics'
+import ErrorBoundary from './components/ErrorBoundary'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -41,17 +45,23 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-    </div>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <div className="App">
+          <SEO />
+          <GoogleAnalytics />
+          <Header />
+          <main>
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+            <Skills />
+            <Contact />
+          </main>
+        </div>
+      </HelmetProvider>
+    </ErrorBoundary>
   )
 }
 

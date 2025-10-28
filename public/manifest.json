@@ -1,0 +1,35 @@
+{
+  "name": "Yashpal Yadav - Frontend Engineer & Full-Stack Developer",
+  "short_name": "Yashpal Yadav",
+  "description": "Portfolio website of Yashpal Yadav - Frontend Engineer & Full-Stack Developer specializing in React, Flutter, and Node.js",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["portfolio", "developer", "technology"],
+  "icons": [
+    {
+      "src": "/Portfolio/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/Portfolio/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/Portfolio/og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+}

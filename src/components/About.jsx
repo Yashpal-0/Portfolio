@@ -60,7 +60,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" role="region" aria-label="About section">
       <div className="container">
         <motion.div
           className="about-content"
@@ -69,12 +69,12 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <motion.div className="about-header" variants={itemVariants}>
+          <motion.header className="about-header" variants={itemVariants}>
             <h2 className="section-title">About Me</h2>
             <p className="section-subtitle">
               A passionate developer with a strong foundation in computer science and physics
             </p>
-          </motion.div>
+          </motion.header>
 
           <div className="about-grid">
             <motion.div className="about-text" variants={itemVariants}>

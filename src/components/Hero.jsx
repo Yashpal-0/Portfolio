@@ -33,7 +33,7 @@ const Hero = () => {
   ]
 
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" role="banner" aria-label="Hero section">
       <div className="hero-container">
         <motion.div
           className="hero-content"
