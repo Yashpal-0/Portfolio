@@ -25,7 +25,7 @@ const Projects = () => {
     {
       title: "ML Algorithms Implementation",
       description: "Implementation of various Machine Learning algorithms from scratch including PCA, K-means, GMM, and more.",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
       technologies: ["Python", "scikit-learn", "pandas", "numpy", "hmmlearn"],
       category: "Machine Learning",
       icon: Brain,
@@ -43,7 +43,7 @@ const Projects = () => {
     {
       title: "Clash of Clans Terminal Game",
       description: "A terminal-based game inspired by Clash of Clans, implemented using Python with OOP principles and comprehensive testing.",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?w=500&h=300&fit=crop",
       technologies: ["Python", "OOP", "unittest", "Terminal UI"],
       category: "Game Development",
       icon: Code,
@@ -126,10 +126,10 @@ const Projects = () => {
       github: "https://github.com/Yashpal-0/Hydrowverse-App",
       demo: "https://play.google.com/store/apps/details?id=com.mycompany.hydrow"
     },
-    {
+    /* {
       title: "CShell - Custom Shell Implementation",
       description: "Implementation of shell commands as well as user-defined commands in C, providing a complete command-line interface experience.",
-      image: "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?w=500&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
       technologies: ["C", "Linux", "System Calls", "Shell Programming", "Process Management"],
       category: "Systems Programming",
       icon: Code,
@@ -142,7 +142,7 @@ const Projects = () => {
       ],
       github: "https://github.com/Yashpal-0/CShell",
       demo: "#"
-    },
+    }, */
     {
       title: "Syscall File Reverser",
       description: "Program that uses only system calls to reverse the content of a file having size greater than RAM size with progress tracking from 0 to 100%.",
@@ -180,7 +180,7 @@ const Projects = () => {
     {
       title: "Cellular Automaton Simulation",
       description: "Conway's Game of Life simulation with pattern recognition, rule generation, and initial state prediction for given grid patterns.",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=500&h=300&fit=crop",
       technologies: ["Python", "Cellular Automata", "Game Theory", "Pattern Recognition", "Simulation"],
       category: "Algorithms & Theory",
       icon: Brain,
