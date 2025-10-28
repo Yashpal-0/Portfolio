@@ -2,6 +2,10 @@
 
 This portfolio website is configured to deploy automatically to GitHub Pages.
 
+## Project Structure
+
+The website files are now in the root directory of the repository, which is the correct structure for GitHub Pages deployment.
+
 ## Automatic Deployment
 
 The website will automatically deploy when you push changes to the `main` branch. The GitHub Actions workflow (`.github/workflows/deploy.yml`) will:
@@ -31,6 +35,7 @@ This will build the project and push it to the `gh-pages` branch.
 - The base path is set to `/Portfolio/` in `vite.config.js`
 - Make sure your repository name is "Portfolio" (case-sensitive)
 - If you change the repository name, update the `base` path in `vite.config.js` accordingly
+- All website files are now in the root directory (not in a subfolder)
 
 ## Local Development
 
