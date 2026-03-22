@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Download } from 'lucide-react'
+import { Mail, Download } from 'lucide-react'
+import { FiGithub, FiLinkedin } from 'react-icons/fi'
 import './Hero.css'
 
 const Hero = () => {
@@ -27,14 +28,14 @@ const Hero = () => {
   }
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/Yashpal-0', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/yashpal-yadav-990278221', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:yashpalyadav050@gmail.com', label: 'Email' }
+    { icon: FiGithub, href: 'https://github.com/Yashpal-0', label: '' },
+    { icon: FiLinkedin, href: 'https://linkedin.com/in/yashpal-yadav-990278221', label: '' },
+    { icon: Mail, href: 'mailto:yashpalyadav050@gmail.com', label: '' }
   ]
 
   return (
     <section id="home" className="hero" role="banner" aria-label="Hero section">
-      <div className="hero-container">
+      <div className="container hero-container">
         <motion.div
           className="hero-content"
           variants={containerVariants}
@@ -81,14 +82,14 @@ const Hero = () => {
               </motion.a>
             </motion.div>
 
-            <motion.div className="hero-social" variants={itemVariants}>
+            <motion.div className="hero-connect" variants={itemVariants}>
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <motion.a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-link"
+                  className="connect-btn"
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                 >

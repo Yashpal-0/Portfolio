@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { Github, ExternalLink, Code, Database, Smartphone, Brain } from 'lucide-react'
+import { ExternalLink, Code, Database, Smartphone, Brain } from 'lucide-react'
+import { FiGithub } from 'react-icons/fi'
 import './Projects.css'
 
 const Projects = () => {
@@ -277,7 +278,7 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           className="project-link"
                         >
-                          <Github size={20} />
+                          <FiGithub size={20} />
                         </a>
                       )}
                       {project.demo && (

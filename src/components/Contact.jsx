@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Download } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Download } from 'lucide-react'
+import { FiGithub, FiLinkedin } from 'react-icons/fi'
 import './Contact.css'
 
 const Contact = () => {
@@ -59,20 +60,20 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: Github,
-      name: "GitHub",
+      icon: FiGithub,
+      name: "",
       url: "https://github.com/Yashpal-0",
       color: "#333"
     },
     {
-      icon: Linkedin,
-      name: "LinkedIn",
+      icon: FiLinkedin,
+      name: "",
       url: "https://linkedin.com/in/yashpal-yadav-990278221",
       color: "#0077b5"
     },
     {
       icon: Mail,
-      name: "Email",
+      name: "",
       url: "mailto:yashpalyadav050@gmail.com",
       color: "#ea4335"
     }
@@ -156,16 +157,16 @@ const Contact = () => {
                 ))}
               </div>
 
-              <div className="social-links">
+              <div className="connect-links">
                 <h4>Follow Me</h4>
-                <div className="social-icons">
+                <div className="connect-icons">
                   {socialLinks.map((social, index) => (
                     <motion.a
                       key={index}
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="social-link"
+                      className="connect-circ"
                       whileHover={{ scale: 1.2, rotate: 5 }}
                       whileTap={{ scale: 0.9 }}
                       style={{ '--social-color': social.color }}
