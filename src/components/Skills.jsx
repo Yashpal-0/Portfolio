@@ -8,7 +8,8 @@ import {
   GitBranch,
   Palette,
   Shield,
-  Zap
+  Zap,
+  Brain
 } from 'lucide-react'
 import './Skills.css'
 
@@ -25,7 +26,19 @@ const Skills = () => {
         { name: "Dart", level: 85 },
         { name: "HTML/CSS", level: 95 },
         { name: "SQL", level: 80 },
-        { name: "R", level: 70 }
+        { name: "Swift", level: 75 },
+        { name: "Kotlin", level: 75 }
+      ]
+    },
+    {
+      title: "AI / Machine Learning",
+      icon: Brain,
+      skills: [
+        { name: "PyTorch", level: 85 },
+        { name: "HuggingFace", level: 80 },
+        { name: "LLMs (GPT/T5)", level: 90 },
+        { name: "Prompt Eng.", level: 95 },
+        { name: "Pandas/NumPy", level: 90 }
       ]
     },
     {
@@ -35,6 +48,7 @@ const Skills = () => {
         { name: "React.js", level: 90 },
         { name: "Flutter", level: 85 },
         { name: "Bootstrap", level: 80 },
+        { name: "React Native", level: 75 },
         { name: "Responsive Design", level: 95 },
         { name: "UI/UX Design", level: 85 }
       ]

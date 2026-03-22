@@ -85,14 +85,15 @@ const About = () => {
                 from BHU, which gave me analytical thinking skills that I now apply to software development.
               </p>
               <p>
-                As a Frontend Engineer at SKDIV Industries, I've been working on cutting-edge projects 
+                As a Frontend Developer at SKDIV Industries, I've been working on cutting-edge projects 
                 including real-time communication platforms and IoT applications. I'm passionate about 
                 creating user-friendly interfaces and solving complex technical challenges.
               </p>
               <p>
-                My research interests lie in educational technology and interactive learning platforms, 
-                where I've contributed to projects like OS4all - a web-based platform for learning 
-                Operating System concepts through interactive labs.
+                My research focuses on NLP, LLM reasoning, and table understanding at the Language Technologies 
+                Research Center (LTRC), where I've improved LLM numerical reasoning accuracy by 32% through 
+                tool-augmented systems. I've also contributed to educational technology platforms like OS4all 
+                at the Software Engineering Research Center.
               </p>
             </motion.div>
 

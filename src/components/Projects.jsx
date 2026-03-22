@@ -7,7 +7,7 @@ const Projects = () => {
     // GitHub Projects
     {
       title: "Greddit",
-      description: "A Reddit-like web application built with the MERN stack, featuring live chat functionality powered by MongoDB Cloud services.",
+      description: "Engineered a full-stack Reddit-like web application using the MERN stack with real-time chat powered by MongoDB Atlas.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
       technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "WebSocket"],
       category: "Full-Stack",
@@ -24,7 +24,7 @@ const Projects = () => {
     },
     {
       title: "ML Algorithms Implementation",
-      description: "Implementation of various Machine Learning algorithms from scratch including PCA, K-means, GMM, and more.",
+      description: "Implemented 6 Machine Learning algorithms from scratch: PCA, K-means, GMM, Multinomial Logistic Regression/Classification, Multi Layer Perceptron, and Decision Trees.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
       technologies: ["Python", "scikit-learn", "pandas", "numpy", "hmmlearn"],
       category: "Machine Learning",
@@ -58,8 +58,8 @@ const Projects = () => {
       demo: "#"
     },
     {
-      title: "Linux Terminal in C",
-      description: "A fully functional Linux Terminal developed in C using kernel system calls exclusively for process management and execution.",
+      title: "CShell — Custom Linux Terminal",
+      description: "Developed a Linux Terminal in C, leveraging kernel system calls exclusively. Implemented command execution, process management (foreground/background), I/O redirection, and process termination.",
       image: "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?w=500&h=300&fit=crop",
       technologies: ["C", "Linux", "System Calls", "Process Management"],
       category: "Systems Programming",
@@ -71,12 +71,12 @@ const Projects = () => {
         "Input/output redirection",
         "Process termination"
       ],
-      github: "#",
+      github: "https://github.com/Yashpal-0/CShell",
       demo: "#"
     },
     {
-      title: "Scheduler for xv6 OS",
-      description: "Developed multiple scheduling algorithms including FCFS, PBS, and MLFQ by modifying core OS modules with syscall tracing.",
+      title: "xv6 Process Scheduler",
+      description: "Developed system call tracing (strace), FCFS, PBS, and MLFQ schedulers by modifying core xv6 kernel modules. Enhanced process management with creation time, dynamic priorities, and priority queues.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop",
       technologies: ["C", "xv6 OS", "Kernel Development", "Scheduling Algorithms"],
       category: "Operating Systems",
@@ -88,7 +88,7 @@ const Projects = () => {
         "Syscall tracing (strace)",
         "Dynamic priority management"
       ],
-      github: "#",
+      github: "https://github.com/Yashpal-0/xv6-scheduling",
       demo: "#"
     },
     /* {

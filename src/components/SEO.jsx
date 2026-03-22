@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet-async'
 
 const SEO = ({ 
-  title = "Yashpal Yadav - Frontend Engineer & Full-Stack Developer | IIIT Hyderabad",
-  description = "Experienced Frontend Engineer & Full-Stack Developer specializing in React, Flutter, and Node.js. B.Tech + MS (Research) in CSE at IIIT Hyderabad. Building innovative web applications and educational platforms.",
-  keywords = "Yashpal Yadav, Frontend Engineer, Full-Stack Developer, React Developer, Flutter Developer, Node.js, IIIT Hyderabad, Portfolio, Web Developer, Software Engineer, JavaScript, TypeScript, MongoDB, Express.js, Educational Technology, OS4all",
+  title = "Yashpal Yadav - SDE & AI/ML Engineer | IIIT Hyderabad",
+  description = "Experienced SDE & AI/ML Engineer specializing in React, Flutter, and Node.js. B.Tech + MS (Research) in CSE at IIIT Hyderabad. Building innovative web applications and educational platforms.",
+  keywords = "Yashpal Yadav, SDE, AI/ML Engineer, React Developer, Flutter Developer, Node.js, IIIT Hyderabad, Portfolio, Web Developer, Software Engineer, JavaScript, TypeScript, MongoDB, Express.js, Educational Technology, OS4all",
   image = "https://yashpal-yadav.vercel.app/og-image.jpg",
   url = "https://yashpal-yadav.vercel.app",
   type = "website"

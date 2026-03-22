@@ -5,32 +5,33 @@ import './Experience.css'
 const Experience = () => {
   const experiences = [
     {
-      company: "SKDIV® Industries Private Limited",
-      position: "Frontend Engineer (Remote)",
-      period: "Aug 2025 - Present",
-      location: "Remote",
-      description: "Leading frontend development for CREW platform, focusing on real-time communication features.",
+      company: "Language Technologies Research Center",
+      position: "Undergraduate Researcher",
+      period: "July 2024 - Present",
+      location: "IIIT Hyderabad",
+      description: "Developed and implemented a hybrid methodology to improve LLM performance on numerical reasoning and structured table-based QA tasks.",
       achievements: [
-        "Architected and implemented the 'CREW Calling' feature using Flutter and Livekit SDK",
-        "Delivered high-quality, real-time audio communication for both 1-on-1 and group calls",
-        "Enhanced user experience with seamless integration of calling features"
+        "Engineered a tool-augmented system allowing an LLM to delegate operations to a Python 'calculator', improving calculation accuracy from 60% to 92%",
+        "Designed and validated robust prompt-engineering strategies with DFLoader, achieving 88% accuracy on structure-understanding tasks",
+        "Fine-tuned models on the FeTaQA benchmark, achieving a 28.5 BLEU score and reducing factual hallucinations to 5%",
+        "Created numerical probes based on a 4-level reasoning taxonomy and tested zero-shot generalization with 70% accuracy"
       ],
-      technologies: ["Flutter", "Livekit SDK", "Real-time Communication", "WebRTC"],
-      link: "https://apps.apple.com/au/app/crew/id6739217561"
+      technologies: ["Python", "PyTorch", "LLMs (GPT-3.5, FlanT5)", "Prompt Engineering", "Pandas"],
+      link: ""
     },
     {
       company: "SKDIV® Industries Private Limited",
       position: "Frontend Developer Intern (Remote)",
-      period: "May 2024 - Aug 2025",
+      period: "May 2024 - Nov 2025",
       location: "Remote",
-      description: "Developed core messaging functionality and real-time features for the CREW platform.",
+      description: "Developed core messaging functionality, offline capabilities, and built the CREW Calling feature.",
       achievements: [
+        "Architected and implemented the 'CREW Calling' feature using Flutter and Livekit SDK for high-quality real-time audio communication",
         "Engineered core real-time messaging frontend using Flutter with secure WebSocket connections",
         "Implemented robust offline capabilities using IndexedDB with Redis cache backend",
-        "Enhanced user engagement with Firebase Cloud Messaging (FCM) integration",
-        "Significantly improved application resilience and user experience"
+        "Enhanced user engagement with Firebase Cloud Messaging (FCM) integration"
       ],
-      technologies: ["Flutter", "WebSocket", "IndexedDB", "Redis", "Firebase", "Real-time Messaging"],
+      technologies: ["Flutter", "Livekit SDK", "WebSocket", "IndexedDB", "Redis", "Firebase", "Real-time Messaging"],
       link: "https://apps.apple.com/au/app/crew/id6739217561"
     },
     {
@@ -38,12 +39,12 @@ const Experience = () => {
       position: "Undergraduate Researcher",
       period: "May 2023 - July 2024",
       location: "IIIT Hyderabad",
-      description: "Contributed to educational technology platform for interactive OS learning.",
+      description: "Developed an interactive web-based platform for students to learn Operating System concepts.",
       achievements: [
-        "Developed 'Process Life Cycle', 'Context Switching', and 'Scheduling' experiments",
-        "Achieved 20% increase in student engagement and understanding of OS concepts",
-        "Integrated Express.js backend for enhanced data analysis capabilities",
-        "Reduced data processing time by 15% through optimized backend operations"
+        "Led the development of 'Process Life Cycle', 'Context Switching', and 'Scheduling' experiments",
+        "Achieved 20% increase in student engagement and understanding of complex OS concepts",
+        "Integrated Express.js for backend operations, enhancing data analysis capabilities",
+        "Reduced data processing time by 15%, leading to more efficient project outcomes"
       ],
       technologies: ["HTML", "CSS", "JavaScript", "Express.js", "Educational Technology"],
       link: "https://vlab-os.github.io/OS4all/"
@@ -53,12 +54,11 @@ const Experience = () => {
       position: "Project Intern",
       period: "Jan 2023 - May 2023",
       location: "Hyderabad, Telangana",
-      description: "Developed IoT-based water management application with real-time monitoring capabilities.",
+      description: "Engineered Hydrowverse app with IoT integration via ThingSpeak API for real-time water management.",
       achievements: [
-        "Engineered Hydrowverse app using Flutter with IoT device integration",
-        "Integrated ThingSpeak API for real-time data fetching, improving accuracy by 30%",
-        "Designed intuitive interface for live water level updates and usage tracking",
-        "Implemented QR code scanning for seamless device-phone connectivity"
+        "Engineered Hydrowverse app using Flutter with IoT device integration, enhancing data accuracy by 30%",
+        "Designed intuitive interface for live water level updates, daily usage tracking, and wastage detection",
+        "Established seamless device-phone connectivity via QR code scanning for quick alerts"
       ],
       technologies: ["Flutter", "IoT", "ThingSpeak API", "QR Code", "Real-time Data"],
       link: "https://play.google.com/store/apps/details?id=com.mycompany.hydrow"

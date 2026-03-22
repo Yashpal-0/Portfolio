@@ -54,12 +54,12 @@ const Hero = () => {
               </motion.span>
             </motion.h1>
             <motion.h2 className="hero-subtitle">
-              Frontend Engineer & Full-Stack Developer
+              SDE & AI/ML Engineer
             </motion.h2>
             <motion.p className="hero-description">
-              B.Tech + MS (Research) in CSE at IIIT Hyderabad. 
-              Passionate about creating beautiful, functional web applications 
-              and exploring the intersection of technology and user experience.
+              B.Tech + MS (Research) in CSE at IIIT Hyderabad specializing in NLP, LLM reasoning, and table understanding. 
+              Experienced in full-stack and mobile development, passionate about creating beautiful applications 
+              and exploring the intersection of AI and user experience.
             </motion.p>
             
             <motion.div className="hero-buttons" variants={itemVariants}>
@@ -124,13 +124,13 @@ const Hero = () => {
                     <span className="property">name:</span> <span className="string">'Yashpal Yadav'</span>,
                   </div>
                   <div className="code-line indent">
-                    <span className="property">role:</span> <span className="string">'Frontend Engineer'</span>,
+                    <span className="property">role:</span> <span className="string">'SDE & AI/ML Engineer'</span>,
                   </div>
                   <div className="code-line indent">
-                    <span className="property">skills:</span> [<span className="string">'React'</span>, <span className="string">'Flutter'</span>, <span className="string">'Node.js'</span>],
+                    <span className="property">skills:</span> [<span className="string">'React'</span>, <span className="string">'Flutter'</span>, <span className="string">'Node.js'</span>, <span className="string">'Python'</span>, <span className="string">'PyTorch'</span>],
                   </div>
                   <div className="code-line indent">
-                    <span className="property">passion:</span> <span className="string">'Building amazing UIs'</span>
+                    <span className="property">passion:</span> <span className="string">'Building AI-powered UIs'</span>
                   </div>
                   <div className="code-line">{'}'}</div>
                 </div>

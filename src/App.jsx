@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { HelmetProvider } from 'react-helmet-async'
 import SEO from './components/SEO'
-import GoogleAnalytics from './components/GoogleAnalytics'
+import SiteMetrics from './components/SiteMetrics'
 import ErrorBoundary from './components/ErrorBoundary'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -49,7 +49,7 @@ function App() {
       <HelmetProvider>
         <div className="App">
           <SEO />
-          <GoogleAnalytics />
+          <SiteMetrics />
           <Header />
           <main>
             <Hero />
