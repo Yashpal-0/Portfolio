@@ -26,6 +26,7 @@ function App() {
   if (isLoading) {
     return (
       <div className="loading-screen">
+        <div className="bg-grid"></div>
         <motion.div
           className="loading-spinner"
           animate={{ rotate: 360 }}
@@ -48,6 +49,8 @@ function App() {
     <ErrorBoundary>
       <HelmetProvider>
         <div className="App">
+          {/* Background Grid Effect */}
+          <div className="bg-grid"></div>
           <SEO />
           <SiteMetrics />
           <Header />

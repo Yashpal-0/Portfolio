@@ -16,6 +16,21 @@ html {
   overflow: hidden;
 }
 
+/* Background Grid Effect */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* Ambient Background Glows */
 .App::before, .App::after {
   content: '';
@@ -85,7 +100,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   font-weight: 300;
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
 }
 
 /* Button Styles */
@@ -101,7 +116,7 @@ section {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   position: relative;
   isolation: isolate;
   border: 1px solid transparent;
@@ -158,13 +173,22 @@ section {
   to { transform: rotate(360deg); }
 }
 
+.loading-screen > *:not(.bg-grid) {
+  z-index: 10;
+  position: relative;
+}
+
+.loading-screen .bg-grid {
+  z-index: 0;
+}
+
 .loading-screen h2 {
   color: var(--text-primary);
   font-size: 1.5rem;
   font-weight: 500;
   margin-top: 2rem;
   letter-spacing: 2px;
-  font-family: 'Outfit', sans-serif;
+  font-family: inherit;
 }
 
 /* Selectors */
