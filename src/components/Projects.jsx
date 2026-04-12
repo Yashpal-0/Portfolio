@@ -1,245 +1,106 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Code, Database, Smartphone, Brain } from 'lucide-react'
+import { ExternalLink, Code, Smartphone, Brain, Terminal, Cpu, FileText } from 'lucide-react'
 import { FiGithub } from 'react-icons/fi'
 import './Projects.css'
 
 const Projects = () => {
   const projects = [
-    // GitHub Projects
+    {
+      title: "The Compliance Clerk",
+      subtitle: "Intelligent Document Extraction",
+      description: "4-stage fault-tolerant pipeline to automate structured data extraction from bilingual (English/Gujarati) Indian government PDFs — eChallan, NA Orders, and Lease Deeds — eliminating manual parsing workflows.",
+      technologies: ["Python", "LLM Agents", "OpenAI API", "SQLite", "pdfplumber", "Tesseract OCR"],
+      category: "AI / LLM Pipeline",
+      icon: FileText,
+      gradient: "cyan",
+      featured: true,
+      highlights: [
+        "Schema-valid JSON output via autonomous LLM tool-calling, eliminating hallucinated fields",
+        "Dual-tier OCR: pdfplumber + pytesseract fallback for digital and scanned PDFs",
+        "Handles bilingual English/Gujarati government documents at production scale"
+      ],
+      github: "https://github.com/Yashpal-0/The-Compliance-Clerk",
+      demo: null
+    },
     {
       title: "Greddit",
-      description: "Engineered a full-stack Reddit-like web application using the MERN stack with real-time chat powered by MongoDB Atlas.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
+      subtitle: "Reddit-like Social Platform",
+      description: "Full-stack Reddit-like web app with the MERN stack featuring real-time chat, sub-community management, and user moderation powered by MongoDB Atlas.",
       technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "WebSocket"],
       category: "Full-Stack",
       icon: Code,
-      features: [
-        "User authentication and authorization",
-        "Real-time chat functionality",
-        "Post creation and voting system",
-        "Comment threading",
-        "Responsive design"
-      ],
-      github: "#",
-      demo: "#"
+      gradient: "violet",
+      featured: false,
+      highlights: [],
+      github: "https://github.com/Yashpal-0/Greddit",
+      demo: null
     },
     {
-      title: "ML Algorithms Implementation",
-      description: "Implemented 6 Machine Learning algorithms from scratch: PCA, K-means, GMM, Multinomial Logistic Regression/Classification, Multi Layer Perceptron, and Decision Trees.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
-      technologies: ["Python", "scikit-learn", "pandas", "numpy", "hmmlearn"],
+      title: "ML Algorithms from Scratch",
+      subtitle: "Core ML Implementations",
+      description: "Reproduced 6 core ML algorithms from scratch — PCA, K-means, GMM, Multinomial Logistic Regression, Multi-Layer Perceptron, and Decision Trees — validated against scikit-learn baselines.",
+      technologies: ["Python", "scikit-learn", "Pandas", "NumPy", "hmmlearn"],
       category: "Machine Learning",
       icon: Brain,
-      features: [
-        "PCA (Principal Component Analysis)",
-        "K-means clustering",
-        "GMM (Gaussian Mixture Models)",
-        "Multinomial Logistic Regression",
-        "Multi Layer Perceptron",
-        "Decision Trees"
-      ],
-      github: "#",
-      demo: "#"
+      gradient: "cyan",
+      featured: false,
+      highlights: [],
+      github: "https://github.com/Yashpal-0/ML-Algorithms",
+      demo: null
     },
     {
-      title: "Clash of Clans Terminal Game",
-      description: "A terminal-based game inspired by Clash of Clans, implemented using Python with OOP principles and comprehensive testing.",
-      image: "https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?w=500&h=300&fit=crop",
-      technologies: ["Python", "OOP", "unittest", "Terminal UI"],
-      category: "Game Development",
-      icon: Code,
-      features: [
-        "Multiple game levels",
-        "Unique character abilities",
-        "Building and troop management",
-        "Comprehensive unit testing",
-        "Object-oriented design"
-      ],
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "CShell — Custom Linux Terminal",
-      description: "Developed a Linux Terminal in C, leveraging kernel system calls exclusively. Implemented command execution, process management (foreground/background), I/O redirection, and process termination.",
-      image: "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?w=500&h=300&fit=crop",
+      title: "CShell",
+      subtitle: "Custom Linux Terminal",
+      description: "Custom Linux shell in C using kernel system calls, supporting command execution, foreground/background process management, I/O redirection, and signal handling.",
       technologies: ["C", "Linux", "System Calls", "Process Management"],
-      category: "Systems Programming",
-      icon: Code,
-      features: [
-        "Command execution",
-        "Process management (foreground/background)",
-        "Process information retrieval",
-        "Input/output redirection",
-        "Process termination"
-      ],
+      category: "Systems",
+      icon: Terminal,
+      gradient: "violet",
+      featured: false,
+      highlights: [],
       github: "https://github.com/Yashpal-0/CShell",
-      demo: "#"
+      demo: null
     },
     {
       title: "xv6 Process Scheduler",
-      description: "Developed system call tracing (strace), FCFS, PBS, and MLFQ schedulers by modifying core xv6 kernel modules. Enhanced process management with creation time, dynamic priorities, and priority queues.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop",
-      technologies: ["C", "xv6 OS", "Kernel Development", "Scheduling Algorithms"],
-      category: "Operating Systems",
-      icon: Code,
-      features: [
-        "FCFS (First Come First Served)",
-        "PBS (Priority Based Scheduling)",
-        "MLFQ (Multi-Level Feedback Queue)",
-        "Syscall tracing (strace)",
-        "Dynamic priority management"
-      ],
+      subtitle: "Kernel-Level Scheduling",
+      description: "Extended core xv6 kernel modules to support strace, FCFS, PBS, and MLFQ schedulers with dynamic priority and creation-time tracking.",
+      technologies: ["C", "xv6", "Kernel Programming", "System Calls"],
+      category: "OS / Kernel",
+      icon: Cpu,
+      gradient: "cyan",
+      featured: false,
+      highlights: [],
       github: "https://github.com/Yashpal-0/xv6-scheduling",
-      demo: "#"
+      demo: null
     },
-    /* {
-      title: "HydrowVerse IoT App",
-      description: "Flutter-based IoT application for water management with real-time monitoring and smart device integration.",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&h=300&fit=crop",
-      technologies: ["Flutter", "IoT", "ThingSpeak API", "QR Code", "Real-time Data"],
-      category: "Mobile Development",
-      icon: Smartphone,
-      features: [
-        "Real-time water level monitoring",
-        "QR code device pairing",
-        "Usage tracking and analytics",
-        "Push notifications",
-        "Cross-platform compatibility"
-      ],
-      github: "#",
-      demo: "https://play.google.com/store/apps/details?id=com.mycompany.hydrow"
-    }, */
     {
       title: "HydrowVerse IoT App",
-      description: "Flutter-based IoT application for water management with real-time monitoring and smart device integration using 'Starr' smart water level device.",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&h=300&fit=crop",
-      technologies: ["Flutter", "Dart", "IoT", "ThingSpeak API", "QR Code", "Real-time Data"],
-      category: "Mobile Development",
+      subtitle: "Smart Water Management",
+      description: "Flutter app for the Starr smart water level device — real-time monitoring, daily usage tracking, and wastage detection for 200+ households via ThingSpeak API and QR pairing.",
+      technologies: ["Flutter", "Dart", "ThingSpeak API", "IoT", "QR Code"],
+      category: "Mobile",
       icon: Smartphone,
-      features: [
-        "Live water level monitoring",
-        "Daily usage tracking and analytics",
-        "Potential wastage detection",
-        "QR code device pairing",
-        "Real-time notifications",
-        "Cross-platform compatibility"
-      ],
+      gradient: "violet",
+      featured: false,
+      highlights: [],
       github: "https://github.com/Yashpal-0/Hydrowverse-App",
       demo: "https://play.google.com/store/apps/details?id=com.mycompany.hydrow"
-    },
-    /* {
-      title: "CShell - Custom Shell Implementation",
-      description: "Implementation of shell commands as well as user-defined commands in C, providing a complete command-line interface experience.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
-      technologies: ["C", "Linux", "System Calls", "Shell Programming", "Process Management"],
-      category: "Systems Programming",
-      icon: Code,
-      features: [
-        "Built-in shell commands",
-        "User-defined command support",
-        "Process execution and management",
-        "Command parsing and interpretation",
-        "Error handling and validation"
-      ],
-      github: "https://github.com/Yashpal-0/CShell",
-      demo: "#"
-    }, */
-    {
-      title: "Syscall File Reverser",
-      description: "Program that uses only system calls to reverse the content of a file having size greater than RAM size with progress tracking from 0 to 100%.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&h=300&fit=crop",
-      technologies: ["C", "System Calls", "File I/O", "Memory Management", "Progress Tracking"],
-      category: "Systems Programming",
-      icon: Code,
-      features: [
-        "Handles files larger than RAM",
-        "Progress tracking (0-100%)",
-        "Efficient memory usage",
-        "System call optimization",
-        "Large file processing"
-      ],
-      github: "https://github.com/Yashpal-0/Syscall",
-      demo: "#"
-    },
-    {
-      title: "LegoJail Database Management",
-      description: "A comprehensive database management system for a Jail with staff, guards, cells, and facilities. Implemented with Python for functional dependencies and user interaction.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      technologies: ["Python", "Database Design", "SQL", "Functional Dependencies", "Data Modeling"],
-      category: "Database Systems",
-      icon: Database,
-      features: [
-        "Complete jail management system",
-        "Staff and guard management",
-        "Cell and facility tracking",
-        "Functional dependency implementation",
-        "User-interactive Python interface"
-      ],
-      github: "https://github.com/Yashpal-0/LegoJail",
-      demo: "#"
-    },
-    {
-      title: "Cellular Automaton Simulation",
-      description: "Conway's Game of Life simulation with pattern recognition, rule generation, and initial state prediction for given grid patterns.",
-      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=500&h=300&fit=crop",
-      technologies: ["Python", "Cellular Automata", "Game Theory", "Pattern Recognition", "Simulation"],
-      category: "Algorithms & Theory",
-      icon: Brain,
-      features: [
-        "Conway's Game of Life implementation",
-        "Pattern recognition algorithms",
-        "Rule generation from patterns",
-        "Initial state prediction",
-        "Grid-based simulation"
-      ],
-      github: "https://github.com/Yashpal-0/Cellular-Automaton-Simulation",
-      demo: "#"
-    },
-    {
-      title: "RPS Beat the DFA",
-      description: "Rock, Paper, Scissors game with deterministic finite automaton that produces a DFA to beat every opponent move for given state constraints.",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&h=300&fit=crop",
-      technologies: ["Perl", "DFA", "Game Theory", "Automaton Theory", "Algorithm Design"],
-      category: "Algorithms & Theory",
-      icon: Brain,
-      features: [
-        "DFA-based game strategy",
-        "State optimization (≤30 to ≤1000)",
-        "Opponent move prediction",
-        "Automaton theory implementation",
-        "Strategic game playing"
-      ],
-      github: "https://github.com/Yashpal-0/RPS-Beat-the-DFA",
-      demo: "#"
-    },
-    // Original Portfolio Projects
-    
+    }
   ]
-
-  const categories = ["All", "Mobile Development", "Systems Programming", "Database Systems", "Algorithms & Theory", "Full-Stack", "Machine Learning", "Game Development", "Operating Systems"]
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
+    visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.1 } }
   }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut'
-      }
-    }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
   }
+
+  const featured = projects.find(p => p.featured)
+  const rest = projects.filter(p => !p.featured)
 
   return (
     <section id="projects" className="projects">
@@ -254,70 +115,93 @@ const Projects = () => {
           <motion.div className="projects-header" variants={itemVariants}>
             <h2 className="section-title">Projects</h2>
             <p className="section-subtitle">
-              A showcase of my work across different domains and technologies
+              A selection of work across AI, systems, and full-stack
             </p>
           </motion.div>
 
+          {/* Featured Project */}
+          <motion.div
+            className="project-card featured"
+            variants={itemVariants}
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className={`project-visual grad-${featured.gradient}`}>
+              <div className="project-icon-wrap">
+                <featured.icon size={40} />
+              </div>
+              <span className="featured-badge">Featured</span>
+              <span className="project-category-badge">{featured.category}</span>
+            </div>
+            <div className="project-body featured-body">
+              <div className="project-main">
+                <h3>{featured.title}</h3>
+                <p className="project-sub">{featured.subtitle}</p>
+                <p className="project-description">{featured.description}</p>
+                <ul className="project-highlights">
+                  {featured.highlights.map((h, i) => <li key={i}>{h}</li>)}
+                </ul>
+              </div>
+              <div className="project-footer">
+                <div className="project-technologies">
+                  {featured.technologies.map((tech, i) => (
+                    <span key={i} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+                <div className="project-links">
+                  {featured.github && (
+                    <a href={featured.github} target="_blank" rel="noopener noreferrer" className="project-link-btn">
+                      <FiGithub size={16} /> GitHub
+                    </a>
+                  )}
+                  {featured.demo && (
+                    <a href={featured.demo} target="_blank" rel="noopener noreferrer" className="project-link-btn demo">
+                      <ExternalLink size={16} /> Demo
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Grid Projects */}
           <motion.div className="projects-grid" variants={containerVariants}>
-            {projects.map((project, index) => (
+            {rest.map((project, index) => (
               <motion.div
                 key={index}
                 className="project-card"
                 variants={itemVariants}
-                whileHover={{ y: -10, scale: 1.02 }}
+                whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="project-image">
-                  <img src={project.image} alt={project.title} />
-                  <div className="project-overlay">
+                <div className={`project-visual grad-${project.gradient}`}>
+                  <div className="project-icon-wrap">
+                    <project.icon size={30} />
+                  </div>
+                  <span className="project-category-badge">{project.category}</span>
+                </div>
+                <div className="project-body">
+                  <h3>{project.title}</h3>
+                  <p className="project-sub">{project.subtitle}</p>
+                  <p className="project-description">{project.description}</p>
+                  <div className="project-footer">
+                    <div className="project-technologies">
+                      {project.technologies.map((tech, i) => (
+                        <span key={i} className="tech-tag">{tech}</span>
+                      ))}
+                    </div>
                     <div className="project-links">
                       {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="project-link"
-                        >
-                          <FiGithub size={20} />
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link-btn">
+                          <FiGithub size={15} /> GitHub
                         </a>
                       )}
                       {project.demo && (
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="project-link"
-                        >
-                          <ExternalLink size={20} />
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link-btn demo">
+                          <ExternalLink size={15} /> Demo
                         </a>
                       )}
                     </div>
-                  </div>
-                </div>
-
-                <div className="project-content">
-                  <div className="project-header">
-                    <h3>{project.title}</h3>
-                    <span className="project-category">{project.category}</span>
-                  </div>
-
-                  <p className="project-description">{project.description}</p>
-
-                  <div className="project-features">
-                    <h5>Key Features:</h5>
-                    <ul>
-                      {project.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex}>{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="project-technologies">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
                   </div>
                 </div>
               </motion.div>

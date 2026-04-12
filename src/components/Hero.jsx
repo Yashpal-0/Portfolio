@@ -28,9 +28,9 @@ const Hero = () => {
   }
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/Yashpal-0', label: '' },
-    { icon: FiLinkedin, href: 'https://linkedin.com/in/yashpal-yadav-990278221', label: '' },
-    { icon: Mail, href: 'mailto:yashpalyadav050@gmail.com', label: '' }
+    { icon: FiGithub, href: 'https://github.com/Yashpal-0', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'https://linkedin.com/in/yashpal-yadav-990278221', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:yashpalyadav050@gmail.com', label: 'Email' }
   ]
 
   return (
@@ -134,6 +134,7 @@ const Hero = () => {
                     <span className="property">passion:</span> <span className="string">'Building AI-powered UIs'</span>
                   </div>
                   <div className="code-line">{'}'}</div>
+                  <div className="code-line"><span className="code-cursor"></span></div>
                 </div>
               </div>
             </div>
